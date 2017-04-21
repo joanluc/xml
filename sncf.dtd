@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- De la gare de : BORDEAUX SAINT JEAN ; Transporteur : Intercités; Numéro du train : 4655; Arrivée à : 11h42 ; A la gare de : SETE -->
+<!DOCTYPE liste_de_trains [
+ <!ELEMENT liste_de_trains (train)*>
+ <!ELEMENT train (gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?, type_train?, id_train?, nombre_voitures?)>
+ <!ELEMENT gare_depart(#PCDATA)>
+ <!ELEMENT heure_depart(#PCDATA)>
+ <!ELEMENT gare_arrivee(#PCDATA)>
+ <!ELEMENT heure_arrivee(#PCDATA)>
+ <!ELEMENT type_train (#PCDATA | tgv | ter | intercités | bus) "bus">
+ <!ELEMENT id_train(#PCDATA)>
+ <!ELEMENT nombre_voitures>
+]>
+<liste_de_trains>
+  <train>
+    <nom>BORDEAUX SAINT JEAN</nom>
+    <heure_depart>7h02</heure_depart>
+    <gare_arrivee>SETE</gare_arrivee>
+    <heure_arrivee>11h42</heure_arrivee>
+    <type_train>Intercités</type_train>
+    <id_train>4655</id_train>
+    <nombre_voitures>5<nombre_voitures>
+  </train>
+  <train>
+    <nom>PEYREHORADE</nom>
+    <heure_depart>7h02</heure_depart>
+    <gare_arrivee>BAYONNE</gare_arrivee>
+    <heure_arrivee>8h30</heure_arrivee>
+    <type_train>Bus</type_train>
+    <id_train>4030064100</id_train>
+    <nombre_voitures>1<nombre_voitures>
+  </train>
+</liste_de_trains>

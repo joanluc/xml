@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>Base de données SNCF</dc:title>
+<dc:creator>Morgane</dc:creator>
+<dc:subject>Base de données SNCF</dc:subject>
+<dc:description>Encodage XML  des informations d'un dépliant d'horaires de TER.
+Informations sur la ligne:liste des gares, liste des horaires en chaque gare pour lesquelles le train s'arrête, le type de chaque train : TER, TGV, intercités.</dc:description>
+<dc:publisher>Morgane</dc:publisher>
+<dc:contributor>Morgane</dc:contributor>
+<dc:contributor>Joan Luc</dc:contributor>
+<dc:date>ven. avril 21 22:04:25 CEST 2017</dc:date>
+<dc:type>string</dc:type>
+<dc:format>XML</dc:format>
+<dc:identifier>Base de données SNCF</dc:identifier>
+<dc:source>projet_xml-EdLib.xml</dc:source>
+<dc:language>FR</dc:language>
+<dc:relation>ligne(num_ligne,gare_depart,date_heure_depart,gare_arrivee,date_heure_arrivee)</dc:relation>
+<dc:relation>train(num_ligne,num_train,type_train,nbr_voitures)</dc:relation>
+<dc:relation>voiture(type_train,type_billet)</dc:relation>
+<dc:relation>gare(num_train,date_heure_arrivee,date_heure_depart)</dc:relation>
+<dc:relation>type_train(TGV,TER,Intercite,Bus)</dc:relation>
+<dc:relation>type_billet(tgv,oui-go,sncf_1,sncf_2)</dc:relation>
+<dc:coverage>ligne</dc:coverage>
+<dc:rights>CC</dc:rights>
+
+</metadata>

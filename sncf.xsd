@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsd" href="sncf.xsd"?>
+<!-- Elément racine -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="chemin_vers_fichier.xsd">
+        <xsd:element name="ligne" type="xsd:string" >
+	    <ligne>
+	    </ligne>
+	</xsd:element >
+        <xsd:element name="train" type="xsd:string" >
+	    <!-- train (gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?, type_train?, id_train?, nombre_voitures?)-->
+	</xsd:element >
+        <xsd:element name="voiture" type="xsd:string" >
+	</xsd:element >
+    </racine>
+</xsd:schema>
