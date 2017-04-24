@@ -4,14 +4,46 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="chemin_vers_fichier.xsd">
-        <xsd:element name="ligne" type="xsd:string" >
-	    <ligne>
-	    </ligne>
+      <xsd:element name="train">
+	  <xsd:complexType>
+	      <xsd:sequence>
+		  <xsd:element name="num_ligne" type="xsd:string"/>
+		  <xsd:element name="num_train" type="xsd:string"/>
+		  <xsd:element name="type_transport"/>
+		      <xsd:enumType>
+			  <xsd:element name="TGV"/>
+			  <xsd:element name="TER"/>
+			  <xsd:element name="intercité"/>
+			  <xsd:element name="bus"/>
+		      </xsd:enumType>
+		  <xsd:element name="gare_depart" type="xsd:string"/>
+		  <xsd:element name="date_depart" type="xsd:time_date"/>
+		  <xsd:element name="heure_depart" type="xsd:time_hour"/>
+		  <xsd:element name="gare_arrivee" type="xsd:string"/>
+		  <xsd:element name="date_arrivee" type="xsd:time_date"/>
+		  <xsd:element name="heure_arrivee" type="xsd:time_hour"/>
+		  <xsd:element name="nombre_voitures" type="xsd:integer"/>
+		  <xsd:element name="type_billet"/>
+		      <xsd:enumType>
+			  <xsd:element name="idtgv"/>
+			  <xsd:element name="Oui-go"/>
+			  <xsd:element name="SNCF2"/>
+			  <xsd:element name="SNCF1"/>
+		      </xsd:enumType>
+	      </xsd:sequence>
+	  </xsd:complexType>
 	</xsd:element >
-        <xsd:element name="train" type="xsd:string" >
-	    <!-- train (gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?, type_train?, id_train?, nombre_voitures?)-->
-	</xsd:element >
-        <xsd:element name="voiture" type="xsd:string" >
-	</xsd:element >
+        <xsd:element name="gare">
+	  <!-- gare type="xsd:string"  Gare ; Ville ; GPS ; jour départ ; heure départ; --> 
+	  <xsd:complexType>
+	      <xsd:sequence>
+		  <xsd:element name="Gare" type="xsd:string"/>
+		  <xsd:element name="Ville" type="xsd:string"/>
+		  <xsd:element name="GPS" lat="xsd:latitude" lon="xsd:longitude"/>
+		  <xsd:element name="jour_depart" type="xsd:time_date"/>
+		  <xsd:element name="heure_depart" type="xsd:time_hour"/>
+	      </xsd:sequence> 
+	  </xsd:complexType>
+       </xsd:element >
     </racine>
 </xsd:schema>
