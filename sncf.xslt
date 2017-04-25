@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/xsd" href="sncf.xsd"?>
-<!-- Elément racine -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="chemin_vers_fichier.xsd">
-      <xsd:element name="train">
-	  <xsd:complexType>
-	      <xsd:sequence>
-		  <xsd:element name="num_ligne" type="xsd:string"/>
-		  <xsd:element name="num_train" type="xsd:string"/>
-		  <xsd:element name="type_transport"/>
-		      <xsd:simpleType>
+<?xsl-stylesheet version="1.0" 
+    xmlns:xsd="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+    <HTML>
+        <BODY>
+            <H2>Ligne SNCF</H2>
+	    <TABLE BORDER="1">
+	        <TR BGCOLOR="#9acd32">
+		    <TH>Train</TH>
+		    <TH>Num ligne</TH>
+		    <TH>Num train</TH>
+		</TR>
+		<XSL:for-each select="train">
+		<TR>
+		    <TD><XSL:value-of select="Type de transport"/></TD>
+		    <TD><XSL:choose>
+		        <XSL:when test="TGV">
+			    <TD BGCOLOR="#ff00ff">
+			    <XSL:value-of select="artist"/></td>
+			</XSL:when>
+			<!--    
 		           <xsd:restriction base="xs:string">
 		     	       <xsd:enumeration value="TGV"/>
 			       <xsd:enumeration value="TER"/>
@@ -51,3 +60,8 @@
        </xsd:element >
     </racine>
 </xsd:schema>
+
+            </BODY>
+        </HTML>
+    </xsl:template>
+</xsl:stylesheet>
