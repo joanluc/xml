@@ -7,9 +7,9 @@
       <xsd:element name="train">
 	  <xsd:complexType>
 	      <xsd:sequence>
-		  <xsd:element name="num_ligne" type="xsd:string"/>
-		  <xsd:element name="num_train" type="xsd:string"/>
-		  <xsd:element name="type_transport"/>
+		  <xsd:element name="num_ligne" type="xsd:string" use="required"/>
+		  <xsd:element name="num_train" type="xsd:string" use="required"/>
+		  <xsd:element name="type_transport" use="required"/>
 		      <xsd:simpleType>
 		           <xsd:restriction base="xs:string">
 		     	       <xsd:enumeration value="TGV"/>
@@ -18,12 +18,12 @@
 			       <xsd:enumeration value="bus"/>
 		           </xsd:restriction>
 		      </xsd:simpleType>
-		  <xsd:element name="gare_depart" type="xsd:string"/>
-		  <xsd:element name="date_depart" type="xsd:time_date"/>
-		  <xsd:element name="heure_depart" type="xsd:time_hour"/>
-		  <xsd:element name="gare_arrivee" type="xsd:string"/>
-		  <xsd:element name="date_arrivee" type="xsd:time_date"/>
-		  <xsd:element name="heure_arrivee" type="xsd:time_hour"/>
+		  <xsd:element name="gare_depart" type="xsd:string" use="required"/>
+		  <xsd:element name="date_depart" type="xsd:date"/>
+		  <xsd:element name="heure_depart" type="xsd:time"/>
+		  <xsd:element name="gare_arrivee" type="xsd:string" use="required"/>
+		  <xsd:element name="date_arrivee" type="xsd:date"/>
+		  <xsd:element name="heure_arrivee" type="xsd:time"/>
 		  <xsd:element name="nombre_voitures" type="xsd:integer"/>
 		  <xsd:element name="type_billet"/>
 		      <xsd:simpleType>
@@ -41,11 +41,20 @@
 	  <!-- gare type="xsd:string"  Gare ; Ville ; GPS ; jour départ ; heure départ; --> 
 	  <xsd:complexType>
 	      <xsd:sequence>
-		  <xsd:element name="Gare" type="xsd:string"/>
-		  <xsd:element name="Ville" type="xsd:string"/>
-		  <xsd:element name="GPS" lat="xsd:latitude" lon="xsd:longitude"/>
-		  <xsd:element name="jour_depart" type="xsd:time_date"/>
-		  <xsd:element name="heure_depart" type="xsd:time_hour"/>
+		  <xsd:element name="nom_gare" type="xsd:string" use="required"/>
+		  <xsd:element name="Ville" type="xsd:string" use="required"/>
+		  <xsd:element name="GPS" latitude="xsd:integer" longitude="xsd:integer"/>
+		  <xsd:element name="jour_depart" type="xsd:date"/>
+		  <xsd:element name="heure_depart" type="xsd:time"/>
+	      </xsd:sequence> 
+	  </xsd:complexType>
+       </xsd:element >
+       <xsd:element name="arrêt">
+	  <xsd:complexType>
+	      <xsd:sequence>
+		  <xsd:element name="num_train" type="xsd:string" use="required"/>
+		  <xsd:element name="Gare" type="xsd:string" use="required"/>
+		  <xsd:element name="terminus" type="xsd:boolean" use="required"/>
 	      </xsd:sequence> 
 	  </xsd:complexType>
        </xsd:element >

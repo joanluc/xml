@@ -1,106 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<office:document
-    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
-    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
-    xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
-    xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
-    xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
-    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"
-    xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"
-    xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0"
-    xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
-    xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"
-    xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"
-    xmlns:math="http://www.w3.org/1998/Math/MathML"
-    xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"
-    xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"
-    xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0"
-    xmlns:ooo="http://openoffice.org/2004/office"
-    xmlns:ooow="http://openoffice.org/2004/writer"
-    xmlns:oooc="http://openoffice.org/2004/calc"
-    xmlns:dom="http://www.w3.org/2001/xml-events"
-    xmlns:xforms="http://www.w3.org/2002/xforms"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0"
-    xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0"
-    xmlns:rpt="http://openoffice.org/2005/report"
-    xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:grddl="http://www.w3.org/2003/g/data-view#"
-    xmlns:officeooo="http://openoffice.org/2009/office"
-    xmlns:tableooo="http://openoffice.org/2009/table"
-    xmlns:drawooo="http://openoffice.org/2010/draw"
-    xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0"
-    xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0"
-    xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0"
-    xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0"
-    xmlns:css3t="http://www.w3.org/TR/css3-text/"
-    office:version="1.2"
-    office:mimetype="application/vnd.oasis.opendocument.graphics">
-  <office:meta>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.graphics">
+ <office:meta>
     <meta:initial-creator>Morgane Laborde</meta:initial-creator>
     <meta:creation-date>2017-04-16T23:56:38.04</meta:creation-date>
-    <dc:date>2017-04-25T00:34:47.275808559</dc:date>
+    <dc:date>2017-04-28T23:07:53.914833773</dc:date>
     <dc:creator>Joan Labòrda</dc:creator>
-    <meta:editing-duration>PT2H19M18S</meta:editing-duration>
-    <meta:editing-cycles>6</meta:editing-cycles>
+    <meta:editing-duration>PT2H26M23S</meta:editing-duration>
+    <meta:editing-cycles>8</meta:editing-cycles>
     <meta:generator>LibreOffice/5.0.6.2$Linux_X86_64 LibreOffice_project/00$Build-2</meta:generator>
     <meta:document-statistic meta:object-count="9"/></office:meta>
-  <office:settings>
-    <config:config-item-set config:name="ooo:view-settings">
-    <config:config-item config:name="VisibleAreaTop" config:type="int">-1211</config:config-item>
-    <config:config-item config:name="VisibleAreaLeft" config:type="int">-448</config:config-item>
-    <config:config-item config:name="VisibleAreaWidth" config:type="int">30583</config:config-item>
-    <config:config-item config:name="VisibleAreaHeight" config:type="int">23363</config:config-item>
-    <config:config-item-map-indexed config:name="Views">
+ <office:settings>
+  <config:config-item-set config:name="ooo:view-settings">
+   <config:config-item config:name="VisibleAreaTop" config:type="int">-1211</config:config-item>
+   <config:config-item config:name="VisibleAreaLeft" config:type="int">-448</config:config-item>
+   <config:config-item config:name="VisibleAreaWidth" config:type="int">30582</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">23362</config:config-item>
+   <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
-    <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
-    <config:config-item config:name="GridIsVisible" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="GridIsFront" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="IsSnapToGrid" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="IsSnapToPageMargins" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="IsSnapToSnapLines" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="IsSnapToObjectFrame" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="IsSnapToObjectPoints" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="IsPlusHandlesAlwaysVisible" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="IsFrameDragSingles" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="EliminatePolyPointLimitAngle" config:type="int">1500</config:config-item>
-    <config:config-item config:name="IsEliminatePolyPoints" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="VisibleLayers" config:type="base64Binary">//////////////////////////////////////////8=</config:config-item>
-    <config:config-item config:name="PrintableLayers" config:type="base64Binary">//////////////////////////////////////////8=</config:config-item>
-    <config:config-item config:name="LockedLayers" config:type="base64Binary"/>
-    <config:config-item config:name="NoAttribs" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="NoColors" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="RulerIsVisible" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="PageKind" config:type="short">0</config:config-item>
-    <config:config-item config:name="SelectedPage" config:type="short">0</config:config-item>
-    <config:config-item config:name="IsLayerMode" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="IsDoubleClickTextEdit" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="IsClickChangeRotation" config:type="boolean">true</config:config-item>
-    <config:config-item config:name="SlidesPerRow" config:type="short">4</config:config-item>
-    <config:config-item config:name="EditModeStandard" config:type="int">0</config:config-item>
-    <config:config-item config:name="EditModeNotes" config:type="int">0</config:config-item>
-    <config:config-item config:name="EditModeHandout" config:type="int">1</config:config-item>
-    <config:config-item config:name="VisibleAreaTop" config:type="int">-1211</config:config-item>
-    <config:config-item config:name="VisibleAreaLeft" config:type="int">-448</config:config-item>
-    <config:config-item config:name="VisibleAreaWidth" config:type="int">30585</config:config-item>
-    <config:config-item config:name="VisibleAreaHeight" config:type="int">23365</config:config-item>
-    <config:config-item config:name="GridCoarseWidth" config:type="int">1000</config:config-item>
-    <config:config-item config:name="GridCoarseHeight" config:type="int">1000</config:config-item>
-    <config:config-item config:name="GridFineWidth" config:type="int">100</config:config-item>
-    <config:config-item config:name="GridFineHeight" config:type="int">100</config:config-item>
-    <config:config-item config:name="GridSnapWidthXNumerator" config:type="int">100</config:config-item>
-    <config:config-item config:name="GridSnapWidthXDenominator" config:type="int">1</config:config-item>
-    <config:config-item config:name="GridSnapWidthYNumerator" config:type="int">100</config:config-item>
-    <config:config-item config:name="GridSnapWidthYDenominator" config:type="int">1</config:config-item>
-    <config:config-item config:name="IsAngleSnapEnabled" config:type="boolean">false</config:config-item>
-    <config:config-item config:name="SnapAngle" config:type="int">1500</config:config-item>
-    <config:config-item config:name="ZoomOnPage" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
+     <config:config-item config:name="GridIsVisible" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="GridIsFront" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="IsSnapToGrid" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="IsSnapToPageMargins" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="IsSnapToSnapLines" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="IsSnapToObjectFrame" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="IsSnapToObjectPoints" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="IsPlusHandlesAlwaysVisible" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="IsFrameDragSingles" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="EliminatePolyPointLimitAngle" config:type="int">1500</config:config-item>
+     <config:config-item config:name="IsEliminatePolyPoints" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="VisibleLayers" config:type="base64Binary">//////////////////////////////////////////8=</config:config-item>
+     <config:config-item config:name="PrintableLayers" config:type="base64Binary">//////////////////////////////////////////8=</config:config-item>
+     <config:config-item config:name="LockedLayers" config:type="base64Binary"/>
+     <config:config-item config:name="NoAttribs" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="NoColors" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="RulerIsVisible" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="PageKind" config:type="short">0</config:config-item>
+     <config:config-item config:name="SelectedPage" config:type="short">0</config:config-item>
+     <config:config-item config:name="IsLayerMode" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="IsDoubleClickTextEdit" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="IsClickChangeRotation" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="SlidesPerRow" config:type="short">4</config:config-item>
+     <config:config-item config:name="EditModeStandard" config:type="int">0</config:config-item>
+     <config:config-item config:name="EditModeNotes" config:type="int">0</config:config-item>
+     <config:config-item config:name="EditModeHandout" config:type="int">1</config:config-item>
+     <config:config-item config:name="VisibleAreaTop" config:type="int">-1211</config:config-item>
+     <config:config-item config:name="VisibleAreaLeft" config:type="int">-448</config:config-item>
+     <config:config-item config:name="VisibleAreaWidth" config:type="int">30585</config:config-item>
+     <config:config-item config:name="VisibleAreaHeight" config:type="int">23365</config:config-item>
+     <config:config-item config:name="GridCoarseWidth" config:type="int">1000</config:config-item>
+     <config:config-item config:name="GridCoarseHeight" config:type="int">1000</config:config-item>
+     <config:config-item config:name="GridFineWidth" config:type="int">100</config:config-item>
+     <config:config-item config:name="GridFineHeight" config:type="int">100</config:config-item>
+     <config:config-item config:name="GridSnapWidthXNumerator" config:type="int">100</config:config-item>
+     <config:config-item config:name="GridSnapWidthXDenominator" config:type="int">1</config:config-item>
+     <config:config-item config:name="GridSnapWidthYNumerator" config:type="int">100</config:config-item>
+     <config:config-item config:name="GridSnapWidthYDenominator" config:type="int">1</config:config-item>
+     <config:config-item config:name="IsAngleSnapEnabled" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="SnapAngle" config:type="int">1500</config:config-item>
+     <config:config-item config:name="ZoomOnPage" config:type="boolean">true</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
   </config:config-item-set>
@@ -294,19 +253,22 @@
   </style:style>
   <style:style style:name="dp2" style:family="drawing-page"/>
   <style:style style:name="gr1" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:textarea-horizontal-align="justify" draw:textarea-vertical-align="middle" draw:auto-grow-height="false" fo:min-height="0cm" fo:min-width="0cm"/>
+   <style:graphic-properties draw:textarea-horizontal-align="justify" draw:textarea-vertical-align="middle" draw:auto-grow-height="false" fo:min-height="5.55cm" fo:min-width="3.609cm"/>
   </style:style>
   <style:style style:name="gr2" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:textarea-vertical-align="middle"/>
-  </style:style>
-  <style:style style:name="gr3" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:textarea-horizontal-align="justify" draw:textarea-vertical-align="middle" draw:auto-grow-height="false" fo:min-height="0cm" fo:min-width="0cm"/>
   </style:style>
+  <style:style style:name="gr3" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:textarea-vertical-align="middle"/>
+  </style:style>
   <style:style style:name="gr4" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="0.795cm"/>
+   <style:graphic-properties draw:textarea-horizontal-align="justify" draw:textarea-vertical-align="middle" draw:auto-grow-height="false" fo:min-height="0cm" fo:min-width="0cm"/>
   </style:style>
   <style:style style:name="gr5" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="1.425cm"/>
+   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="1.573cm"/>
+  </style:style>
+  <style:style style:name="gr6" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="0.886cm"/>
   </style:style>
   <style:style style:name="P1" style:family="paragraph">
    <style:paragraph-properties fo:text-align="start"/>
@@ -383,18 +345,17 @@
  <office:body>
   <office:drawing>
    <draw:page draw:name="page1" draw:style-name="dp2" draw:master-page-name="Standard">
-    <draw:custom-shape draw:style-name="gr1" draw:text-style-name="P1" xml:id="id1" draw:id="id1" draw:layer="layout" svg:width="4.109cm" svg:height="4.961cm" svg:x="12.838cm" svg:y="10.127cm">
+    <draw:custom-shape draw:style-name="gr1" draw:text-style-name="P1" xml:id="id1" draw:id="id1" draw:layer="layout" svg:width="4.109cm" svg:height="5.8cm" svg:x="12.838cm" svg:y="9.4cm">
      <text:p text:style-name="P1"><text:span text:style-name="T1">TRAIN</text:span></text:p>
-     <text:p text:style-name="P1">N° train</text:p>
-     <text:p text:style-name="P1">N° ligne</text:p>
-     <text:p text:style-name="P1">Type billet </text:p>
-     <text:p text:style-name="P1">Type transport</text:p>
-     <text:p text:style-name="P1">jour départ</text:p>
-     <text:p text:style-name="P1">heure départ</text:p>
-     <text:p text:style-name="P1"/>
+     <text:p text:style-name="P1">Num-train</text:p>
+     <text:p text:style-name="P1">Num-ligne</text:p>
+     <text:p text:style-name="P1">Type-billet </text:p>
+     <text:p text:style-name="P1">Type-transport</text:p>
+     <text:p text:style-name="P1">Jour-départ</text:p>
+     <text:p text:style-name="P1">Heure-départ</text:p>
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:glue-points="10800 0 0 10800 10800 21600 21600 10800" draw:type="flowchart-process" draw:enhanced-path="M 0 0 L 21600 0 21600 21600 0 21600 0 0 Z N"/>
     </draw:custom-shape>
-    <draw:custom-shape draw:style-name="gr1" draw:text-style-name="P1" xml:id="id3" draw:id="id3" draw:layer="layout" svg:width="4.108cm" svg:height="4.96cm" svg:x="6.956cm" svg:y="4.156cm">
+    <draw:custom-shape draw:style-name="gr2" draw:text-style-name="P1" xml:id="id3" draw:id="id3" draw:layer="layout" svg:width="4.108cm" svg:height="4.96cm" svg:x="6.956cm" svg:y="4.156cm">
      <text:p text:style-name="P1"><text:span text:style-name="T1">Billet</text:span></text:p>
      <text:p text:style-name="P1"><text:span text:style-name="T2">N° train</text:span></text:p>
      <text:p text:style-name="P1"><text:span text:style-name="T2">N° voiture</text:span></text:p>
@@ -404,38 +365,37 @@
      <text:p text:style-name="P1">SNCF2,SNCF1)</text:p>
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:glue-points="10800 0 0 10800 10800 21600 21600 10800" draw:type="flowchart-process" draw:enhanced-path="M 0 0 L 21600 0 21600 21600 0 21600 0 0 Z N"/>
     </draw:custom-shape>
-    <draw:custom-shape draw:style-name="gr1" draw:text-style-name="P1" xml:id="id2" draw:id="id2" draw:layer="layout" svg:width="4.109cm" svg:height="4.961cm" svg:x="21.989cm" svg:y="13.434cm">
+    <draw:custom-shape draw:style-name="gr2" draw:text-style-name="P1" xml:id="id2" draw:id="id2" draw:layer="layout" svg:width="4.109cm" svg:height="4.961cm" svg:x="21.989cm" svg:y="13.434cm">
      <text:p text:style-name="P1"><text:span text:style-name="T1">Gare</text:span></text:p>
      <text:p text:style-name="P1">Ville</text:p>
      <text:p text:style-name="P1">GPS</text:p>
      <text:p text:style-name="P1">jour départ</text:p>
      <text:p text:style-name="P1">heure départ</text:p>
-     <text:p text:style-name="P1"/>
-     <text:p text:style-name="P1"/>
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:glue-points="10800 0 0 10800 10800 21600 21600 10800" draw:type="flowchart-process" draw:enhanced-path="M 0 0 L 21600 0 21600 21600 0 21600 0 0 Z N"/>
     </draw:custom-shape>
-    <draw:connector draw:style-name="gr2" draw:text-style-name="P2" draw:layer="layout" svg:x1="16.947cm" svg:y1="12.608cm" svg:x2="21.989cm" svg:y2="15.915cm" draw:start-shape="id1" draw:start-glue-point="7" draw:end-shape="id2" draw:end-glue-point="5" svg:d="M16947 12608h2521v3307h2521" svg:viewBox="0 0 5043 3308">
+    <draw:connector draw:style-name="gr3" draw:text-style-name="P2" draw:layer="layout" svg:x1="16.947cm" svg:y1="12.3cm" svg:x2="21.989cm" svg:y2="15.915cm" draw:start-shape="id1" draw:start-glue-point="7" draw:end-shape="id2" draw:end-glue-point="5" svg:d="M16947 12300h2521v3615h2521" svg:viewBox="0 0 5043 3616">
      <text:p/>
     </draw:connector>
-    <draw:custom-shape draw:style-name="gr3" draw:text-style-name="P2" draw:layer="layout" svg:width="2.988cm" svg:height="1.286cm" svg:x="17.974cm" svg:y="15.216cm">
+    <draw:custom-shape draw:style-name="gr4" draw:text-style-name="P2" draw:layer="layout" svg:width="2.988cm" svg:height="1.286cm" svg:x="17.974cm" svg:y="15.216cm">
      <text:p/>
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:glue-points="10800 0 3163 3163 0 10800 3163 18437 10800 21600 18437 18437 21600 10800 18437 3163" draw:text-areas="3180 3180 18420 18420" draw:type="flowchart-connector" draw:enhanced-path="U 10800 10800 10800 10800 0 360 Z N"/>
     </draw:custom-shape>
-    <draw:frame draw:style-name="gr4" draw:text-style-name="P3" draw:layer="layout" svg:width="2.768cm" svg:height="1.045cm" svg:x="18.332cm" svg:y="15.377cm">
+    <draw:frame draw:style-name="gr5" draw:text-style-name="P3" draw:layer="layout" svg:width="3.1cm" svg:height="1.823cm" svg:x="18cm" svg:y="15.377cm">
      <draw:text-box>
-      <text:p text:style-name="P2">S&apos;arrête</text:p>
+      <text:p text:style-name="P2">Arrêt</text:p>
+      <text:p text:style-name="P1">terminus</text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:connector draw:style-name="gr2" draw:text-style-name="P2" draw:layer="layout" svg:x1="11.064cm" svg:y1="6.636cm" svg:x2="14.893cm" svg:y2="10.127cm" draw:start-shape="id3" draw:start-glue-point="7" draw:end-shape="id1" draw:end-glue-point="4" svg:d="M11064 6636h3829v3491" svg:viewBox="0 0 3830 3492">
+    <draw:connector draw:style-name="gr3" draw:text-style-name="P2" draw:layer="layout" svg:x1="11.064cm" svg:y1="6.636cm" svg:x2="14.893cm" svg:y2="9.4cm" draw:start-shape="id3" draw:start-glue-point="7" draw:end-shape="id1" draw:end-glue-point="4" svg:d="M11064 6636h3829v2764" svg:viewBox="0 0 3830 2765">
      <text:p/>
     </draw:connector>
-    <draw:custom-shape draw:style-name="gr3" draw:text-style-name="P2" draw:layer="layout" svg:width="3.082cm" svg:height="1.561cm" svg:x="13.305cm" svg:y="6.177cm">
+    <draw:custom-shape draw:style-name="gr4" draw:text-style-name="P2" draw:layer="layout" svg:width="3.082cm" svg:height="1.561cm" svg:x="13.305cm" svg:y="6.177cm">
      <text:p/>
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:glue-points="10800 0 3163 3163 0 10800 3163 18437 10800 21600 18437 18437 21600 10800 18437 3163" draw:text-areas="3180 3180 18420 18420" draw:type="flowchart-connector" draw:enhanced-path="U 10800 10800 10800 10800 0 360 Z N"/>
     </draw:custom-shape>
-    <draw:frame draw:style-name="gr5" draw:text-style-name="P4" draw:layer="layout" svg:width="2.475cm" svg:height="1.675cm" svg:x="13.445cm" svg:y="6.164cm">
+    <draw:frame draw:style-name="gr6" draw:text-style-name="P4" draw:layer="layout" svg:width="2.475cm" svg:height="1.136cm" svg:x="13.445cm" svg:y="6.164cm">
      <draw:text-box>
-      <text:p>Donne accès</text:p>
+      <text:p><text:s/>accès</text:p>
      </draw:text-box>
     </draw:frame>
    </draw:page>
