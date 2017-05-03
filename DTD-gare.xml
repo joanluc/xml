@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+
+<!-- DTD - Attributes
+Type 	Description
+CDATA 	La valeur est une donnée de type caractère
+(en1|en2|..) 	La valeur doit être comprise dans une liste énumerée
+ID 	La valeur est une donnée d'identification unique
+IDREF 	La valeur est la donnée d'identification d'un élément différent
+IDREFS 	La valeur est une liste de données d'identification d'éléments différents 
+NMTOKEN 	La valeur est un nom XML valide
+NMTOKENS 	La valeur est une liste de noms XML valides
+ENTITY 	La valeur est une entité
+ENTITIES 	La valeur est une liste d'entités
+NOTATION 	La valeur est un nom de notation
+xml: 	La valeur est une valeur XML prédéfinie
+-->
+
+<!DOCTYPE ligne_SNCF [
+
+ <!ELEMENT type_de_transport (type)*>
+ <!ELEMENT type (type_train?, nombre_voitures?)>
+ <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+ <!ELEMENT nombre_voitures (#PCDATA | 15 | 10 | 5 | 1) "1" #REQUIRED>
+
+ <!ELEMENT liste_de_trains (train)*>
+ <!ELEMENT train (num_train?, type_train?, nombre_voitures?, gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?)>
+ <!ELEMENT num_train (ID) #IMPLIED>
+ <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+ <!ELEMENT gare_depart (IDREF) #REQUIRED>
+ <!ELEMENT jour_semaine (#PCDATA | Lun | Mar | Mer | Jeu | Ven | Sam | Dim) #REQUIRED>
+ <!ELEMENT heure_depart (#PCDATA) #REQUIRED>
+ <!ELEMENT gare_arrivee (#PCDATA)>
+ <!ELEMENT heure_arrivee (#PCDATA)>
+
+ <!ELEMENT liste_de_gares (gare)*>
+ <!ELEMENT gare (nom_gare?,ville?,gps?)>
+ <!ELEMENT nom_gare (ID) #IMPLIED>
+ <!ELEMENT ville (#PCDATA) #REQUIRED>
+ <!ELEMENT gps  (lon? , lat?)>
+ <!ELEMENT lon (#PCDATA) #REQUIRED>
+ <!ELEMENT lat (#PCDATA) #REQUIRED>
+
+<!ELEMENT liste_arrets (arret)*>
+ <!ELEMENT arret (num_train?,gare?,terminus?,jour_semaine?,heure?)>
+ <!ELEMENT num_train (IDREF) #REQUIRED>
+ <!ELEMENT nom_gare (IDREF) #REQUIRED>
+ <!ELEMENT terminus (#PCDATA | Vrai | Faux) "Faux" #REQUIRED>
+ <!ELEMENT heure (#PCDATA) #REQUIRED>
+ 
+ <!ELEMENT liste_de_voitures (voiture)*>
+ <!ELEMENT voiture (num_voiture?,num_train?,type_billet?,type_train?)>
+ <!ELEMENT num_voiture (ID) #IMPLIED>
+ <!ELEMENT num_train (IDREF) #REQUIRED>
+ <!ELEMENT type_billet (#PCDATA | idtgv | oui-go | SNCF_1_classe | SNCF_2_classe) "SNCF_2_classe" #REQUIRED>
+ <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+ 
+]>
+
+<ligne_SNCF
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
+  <type_de_transport>
+    <!--
+	<!ELEMENT type_de_transport (type)*>
+	<!ELEMENT type (type_train?, nombre_voitures?)>
+	<!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+	<!ELEMENT nombre_voitures (#PCDATA | 15 | 10 | 5 | 1) "1" #REQUIRED>
+     -->
+    <type>
+	<type_train>TGV</type_train>
+	<nombre_voitures>15</nombre_voitures>
+    </type>
+    <type>
+	<type_train>TER</type_train>
+	<nombre_voitures>1O</nombre_voitures>
+    </type>
+    <type>
+	<type_train>intercités</type_train>
+	<nombre_voitures>5</nombre_voitures>
+    </type>
+    <type>
+	<type_train>bus</type_train>
+	<nombre_voitures>1</nombre_voitures>
+    </type>
+  </type_de_transport>
+
+  <liste_de_trains
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
+    <!--
+	<!ELEMENT liste_de_trains (train)*>
+	<!ELEMENT train (num_train?, type_train?, nombre_voitures?, gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?)>
+	<!ELEMENT num_train (#PCDATA) #REQUIRED>
+	<!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+	<!ELEMENT nombre_voitures (#PCDATA | 15 | 10 | 5 | 1) "1" #REQUIRED>
+	<!ELEMENT gare_depart (#PCDATA) #REQUIRED>
+	<!ELEMENT jour_semaine (#PCDATA | Lun | Mar | Mer | Jeu | Ven | Sam | Dim) #REQUIRED>
+	<!ELEMENT heure_depart (#PCDATA) #REQUIRED>
+	<!ELEMENT gare_arrivee (#PCDATA)>
+	<!ELEMENT heure_arrivee (#PCDATA)>
+    -->
+    <train>
+      <num_train>866513</num_train>
+      <type_train>TER</type_train>
+      <nombre_voitures>10<nombre_voitures>
+      <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+      <heure_depart>6h02</heure_depart>
+      <gare_arrivee>Hendaye</gare_arrivee>
+      <heure_arrivee>7h31</heure_arrivee>
+    </train>
+    <train>
+      <num_train>866553</num_train>
+      <type_train>TER</type_train>
+      <nombre_voitures>10<nombre_voitures>
+      <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+      <heure_depart>6h42</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>8h11</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866515</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>7h12</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>8h45</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866555</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>7h42</heure_depart>
+    <gare_arrivee>Bayonne</gare_arrivee>
+    <heure_arrivee>8h26</heure_arrivee>
+   </train>
+   <train>
+    <num_train>867213</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>6h45</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>9h34</heure_arrivee>
+   </train>
+   <train>
+    <num_train>867215</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>7h47</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>10h26</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866519</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>10h12</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>11h42</heure_arrivee>
+  </train>
+  <train>
+    <num_train>867219</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>9h47</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>12h43</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8570/71</num_train>
+    <!--
+	<num_train>8570/71</num_train>
+	Tu as là et à plusieurs reprises pour les TGV le cas particulier de 2 trains qui sont rattachés ensemble, ils se séparent à Dax, puis l'un part probablement vers Hendaye, l'autre vers Tarbes (je pense, quoique cette notation se retrouve aussi pour un TGV ("8590/91") qui est a "Bordeaux Saint Jean" comme <gare_depart> et "Hendaye" comme <gare_arrivee> ? ).
+	A mon avis, le dépliant de référence est incomplet et ne montre pas le terminus réel du train, de même qu'il ne montre pas la tête de ligne réelle puisque tous ces TGV viennent en réalité de Paris
+	Personnellement je préférerai cette notation qui serait plus explicite : "<num_train>8567,8577</num_train>"
+    -->
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>9h51</heure_depart>
+    <gare_arrivee>Dax</gare_arrivee>
+    <heure_arrivee>11h01</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8531</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>10h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>13h22</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8572/73</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>11h51</heure_depart>
+    <gare_arrivee>Dax</gare_arrivee>
+    <heure_arrivee>13h01</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866525</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>13h12</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>14h42</heure_arrivee>
+  </train>
+  <train>
+    <num_train>867225</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>12h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>15h31</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8533</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>13h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>16h21</heure_arrivee>
+  </train>
+  <train>
+    <num_train>867229</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>14h45</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>17h17</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8567/77</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>14h51</heure_depart>
+    <gare_arrivee>Dax</gare_arrivee>
+    <heure_arrivee>16h06</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866583</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>16h42</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>18h12</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8537</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>15h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>18h20</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866535</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>17h12</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>18h42</heure_arrivee>
+  </train>
+  <train>
+    <num_train>867233</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>16h45</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>19h39</heure_arrivee>
+  </train>
+  <train> 
+    <!-- TRAIN EN DOUBLE, JUSTE LE DIMANCHE !
+    <num_train>867233</num_train> Logiquement le numéro de train doit être unique c'est pour ça que je lui ai rajouté ce "-2" -->
+    <num_train>867233-2</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Dim</jour_semaine>
+    <heure_depart>16h45</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>19h33</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866587</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>18h42</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>20h12</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8590/91</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>17h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>20h23</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866539</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>19h15</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>20h44</heure_arrivee>
+  </train>
+  <train>
+    <num_train>867237</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+    <heure_depart>18h47</heure_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>21h35</heure_arrivee>
+  </train>
+  <train>
+    <num_train>8543</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>20h47</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>23h21</heure_arrivee>
+  </train>
+  <train>
+    <num_train>866545</num_train>
+    <type_train>TER</type_train>
+    <nombre_voitures>10<nombre_voitures>
+    <gare_depart>Dax</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>22h20</heure_depart>
+    <gare_arrivee>Bayonne</gare_arrivee>
+    <heure_arrivee>23h04</heure_arrivee>
+  </train>
+  <train>
+    <num_train>7911</num_train>
+    <type_train>TGV</type_train>
+    <nombre_voitures>15<nombre_voitures>
+    <gare_depart>Bordeaux Saint Jean</gare_depart>
+      <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
+    <heure_depart>22h51</heure_depart>
+    <gare_arrivee>Hendaye</gare_arrivee>
+    <heure_arrivee>01h21</heure_arrivee>
+  </train>
+  <train>
+    <!-- Ligne en sens inverse à faire -->
+  </train>
+  </liste_de_trains>
+  <liste_de_gares>
+    <gare>
+      <!-- 
+	   <!ELEMENT liste_de_gares (gare)*>
+	   <!ELEMENT gare (nom_gare?,ville?,gps?)>
+	   <!ELEMENT nom_gare (#PCDATA) #REQUIRED>
+	   <!ELEMENT ville (#PCDATA) #REQUIRED>
+	   <!ELEMENT gps  (lon? , lat?)>
+	   <!ELEMENT lon (#PCDATA) #REQUIRED>
+	   <!ELEMENT lat (#PCDATA) #REQUIRED>
+      -->
+    </gare>
+    <gare>
+    </gare>
+  </liste_de_gares>
+  <liste_arrets>
+    <arret>
+      <!--
+	  <!ELEMENT liste_arrets (arret)*>
+	  <!ELEMENT arret (num_train?,gare?,terminus?,jour_semaine?,heure?)>
+	  <!ELEMENT num_train (#PCDATA) #REQUIRED>
+	  <!ELEMENT nom_gare (#PCDATA) #REQUIRED>
+	  <!ELEMENT terminus (#PCDATA | Vrai | Faux) "Faux" #REQUIRED>
+	  <!ELEMENT heure (#PCDATA) #REQUIRED>
+      -->
+    </arret>
+    <arret>
+    </arret>
+  </liste_arrets>
+  <liste_de_voitures>
+    <voiture>
+      <!--
+	  <!ELEMENT liste_de_voitures (voiture)*>
+	  <!ELEMENT voiture (num_voiture?,type_billet?,type_train?)>
+	  <!ELEMENT num_voiture (#PCDATA) #REQUIRED>
+	  <!ELEMENT type_billet (#PCDATA | idtgv | oui-go | SNCF_1_classe | SNCF_2_classe) "SNCF_2_classe" #REQUIRED>
+	  <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+      -->
+    </voiture>
+    <voiture>
+    </voiture>
+  </liste_de_voitures>
+</ligne_SNCF>
+
+
