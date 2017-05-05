@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
-
-<!-- DTD - Attributes
-Type 	Description
-CDATA 	La valeur est une donnée de type caractère
-(en1|en2|..) 	La valeur doit être comprise dans une liste énumerée
-ID 	La valeur est une donnée d'identification unique
-IDREF 	La valeur est la donnée d'identification d'un élément différent
-IDREFS 	La valeur est une liste de données d'identification d'éléments différents 
-NMTOKEN 	La valeur est un nom XML valide
-NMTOKENS 	La valeur est une liste de noms XML valides
-ENTITY 	La valeur est une entité
-ENTITIES 	La valeur est une liste d'entités
-NOTATION 	La valeur est un nom de notation
-xml: 	La valeur est une valeur XML prédéfinie
-
--->
-
-<!DOCTYPE ligne_SNCF [
-
- <!ELEMENT type_de_transport (type)*>
- <!ELEMENT type (type_train?, nombre_voitures?)>
- <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
- <!ELEMENT nombre_voitures (#PCDATA | 15 | 10 | 5 | 1) "1" #REQUIRED>
-
- <!ELEMENT liste_de_trains (train)*>
- <!ELEMENT train (num_train?, type_train?, nombre_voitures?, gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?)>
- <!ELEMENT num_train (ID) #IMPLIED>
- <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
- <!ELEMENT gare_depart (IDREF) #REQUIRED>
- <!ELEMENT jour_semaine (#PCDATA | Lun | Mar | Mer | Jeu | Ven | Sam | Dim) #REQUIRED>
- <!ELEMENT heure_depart (#PCDATA) #REQUIRED>
- <!ELEMENT gare_arrivee (#PCDATA)>
- <!ELEMENT heure_arrivee (#PCDATA)>
+<xs:schema xmlns:xs="https://www.voyages-sncf.com/train/horaires/bordeaux/hendaye"
+	   targetNamespace="https://www.voyages-sncf.com/"
+	   xmlns="https://www.voyages-sncf.com/"
+	   elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType name="type_de_transport">
+      <xs:sequence>
+	<xs:element name="type_train" default="bus">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="TGV"/>
+	      <xs:enumeration value="TER"/>
+	      <xs:enumeration value="intercités"/>
+	      <xs:enumeration value="bus"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	<xs:element name="nombre_voitures" default="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:positiveInteger">
+	      <xs:enumeration value="15"/>
+	      <xs:enumeration value="10"/>
+	      <xs:enumeration value="5"/>
+	      <xs:enumeration value="1"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="liste_de_trains">
+      <!--
+	  <!ELEMENT liste_de_trains (train)*>
+	  <!ELEMENT train (num_train?, type_train?, nombre_voitures?, gare_depart?, heure_depart?, gare_arrivee?, heure_arrivee?)>
+	  <!ELEMENT num_train (ID) #IMPLIED>
+	  <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+	  <!ELEMENT gare_depart (IDREF) #REQUIRED>
+	  <!ELEMENT jour_semaine (#PCDATA | Lun | Mar | Mer | Jeu | Ven | Sam | Dim) #REQUIRED>
+	  <!ELEMENT heure_depart (#PCDATA) #REQUIRED>
+	  <!ELEMENT gare_arrivee (#PCDATA)>
+	  <!ELEMENT heure_arrivee (#PCDATA)>
 
  <!ELEMENT liste_de_gares (gare)*>
  <!ELEMENT gare (nom_gare?,ville?,gps?)>
@@ -55,8 +62,12 @@ xml: 	La valeur est une valeur XML prédéfinie
  <!ELEMENT num_train (IDREF) #REQUIRED>
  <!ELEMENT type_billet (#PCDATA | idtgv | oui-go | SNCF_1_classe | SNCF_2_classe) "SNCF_2_classe" #REQUIRED>
  <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
- 
-]>
+	-->
+      <xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
 
 <ligne_SNCF
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
