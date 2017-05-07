@@ -1,0 +1,124 @@
+<liste_arrets>
+    <!--
+	<!ELEMENT liste_arrets (arret)*>
+	<!ELEMENT arret (num_train?,gare?,terminus?,jour_semaine?,heure?)>
+	<!ELEMENT num_train (#PCDATA) #REQUIRED>
+	<!ELEMENT nom_gare (#PCDATA) #REQUIRED>
+	<!ELEMENT terminus (#PCDATA | Vrai | Faux) "Faux" #REQUIRED>
+	<!ELEMENT heure (#PCDATA) #REQUIRED>
+    <arret>
+      <num_train>TGV 8531</num_train>
+      <nom_gare></nom_gare>
+      <terminus>Faux</terminus>
+      <heure></heure>      
+    </arret>
+    -->
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Bordeaux Saint-Jean</nom_gare>
+      <terminus>Vrai</terminus>
+      <heure>07h47</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Pessac</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>07h54</heure>
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Facture Biganos</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>08h10</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Morcenx</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>08h41</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Dax </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>09h05</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Saint-Vincent-de-Tyrosse</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>09h24</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Bayonne </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>09h40</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Biarritz </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>09h52</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare> Guéthary </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>10h00</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Saint-Jean-de-Luz - Ciboure</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>10h09</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Hendaye Les Deux-Jumeaux</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>10h19</heure>      
+    </arret>
+    <arret>
+      <num_train>TER 67215</num_train>
+      <nom_gare>Hendaye </nom_gare>
+      <terminus>Vrai</terminus>
+      <heure>10h26</heure>      
+    </arret>
+    <arret>
+      <num_train>TGV 8531</num_train>
+      <nom_gare> Bordeaux Saint-Jean</nom_gare>
+      <terminus>Vrai</terminus>
+      <heure>10h51</heure>      
+    </arret>
+    <arret>
+      <num_train> TGV 8531</num_train>
+      <nom_gare>Dax </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>12h02</heure>      
+    </arret>
+    <arret>
+      <num_train> TGV 8531</num_train>
+      <nom_gare>Bayonne </nom_gare>
+      <terminus>Faux</terminus>
+      <heure>12h33</heure>      
+    </arret>
+    <arret>
+      <num_train> TGV 8531</num_train>
+      <nom_gare> Biarritz</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>12h46</heure>      
+    </arret>
+    <arret>
+      <num_train>TGV 8531</num_train>
+      <nom_gare> Saint-Jean-de-Luz - Ciboure</nom_gare>
+      <terminus>Faux</terminus>
+      <heure>13h03</heure>      
+    </arret>
+    <arret>
+      <num_train>TGV 8531</num_train>
+      <nom_gare> Hendaye </nom_gare>
+      <terminus>Vrai</terminus>
+      <heure>13h22</heure>      
+    </arret>
+</liste_arrets>

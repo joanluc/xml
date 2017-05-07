@@ -1,0 +1,13 @@
+<liste_de_voitures>
+    <voiture>
+      <!--
+	  <!ELEMENT liste_de_voitures (voiture)*>
+	  <!ELEMENT voiture (num_voiture?,type_billet?,type_train?)>
+	  <!ELEMENT num_voiture (#PCDATA) #REQUIRED>
+	  <!ELEMENT type_billet (#PCDATA | idtgv | oui-go | SNCF_1_classe | SNCF_2_classe) "SNCF_2_classe" #REQUIRED>
+	  <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
+      -->
+    </voiture>
+    <voiture>
+    </voiture>
+</liste_de_voitures>

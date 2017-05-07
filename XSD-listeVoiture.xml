@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="ligne_SNCF_Namespace" elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType name="liste_de_voitures">
+	<xs:element name="num_voiture"/>
+	<xs:element name="num_train"/>
+	<xs:simpleType>
+	  <xs:restriction base="type_billet">
+	    <xs:enumeration value="idtgv"/>
+	    <xs:enumeration value="oui-go"/>
+	    <xs:enumeration value="SNCF_1_classe"/>
+	    <xs:enumeration value="SNCF_2_classe"/>
+	  </xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType>
+	  <xs:restriction base="type_train"/>
+	    <xs:enumeration value="TGV"/>
+	    <xs:enumeration value="TER"/>
+	    <xs:enumeration value="intercités"/>
+	    <xs:enumeration value="bus"/>
+	  </xs:restriction>
+	</xs:simpleType>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

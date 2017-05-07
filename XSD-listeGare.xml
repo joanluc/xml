@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="ligne_SNCF_Namespace" elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType name="liste_de_gares">
+      <xs:element name="gare">
+	<xs:complexType mixed="true">
+	  <xs:sequence>
+            <xs:element name="nom_gare"/>
+            <xs:element name="ville"/>
+            <xs:element name="GPS">
+	      <xs:simpleType>
+		<xs:element name="lon"/>
+		<xs:element name="lat"/>
+<!--
+ <!ELEMENT gare (nom_gare?,ville?,gps?)>
+ <!ELEMENT nom_gare (ID) #IMPLIED>
+ <!ELEMENT ville (#PCDATA) #REQUIRED>
+ <!ELEMENT gps  (lon? , lat?)>
+ <!ELEMENT lon (#PCDATA) #REQUIRED>
+ <!ELEMENT lat (#PCDATA) #REQUIRED>
+-->
+	      </xs:simpleType>
+            </xs:element>
+	  </xs:sequence>
+	</xs:complexType>
+      </xs:element>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

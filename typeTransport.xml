@@ -1,0 +1,19 @@
+<ligne_SNCF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
+    <type>
+	<type_train>TGV</type_train>
+	<nombre_voitures>15</nombre_voitures>
+    </type>
+    <type>
+	<type_train>TER</type_train>
+	<nombre_voitures>1O</nombre_voitures>
+    </type>
+    <type>
+	<type_train>intercités</type_train>
+	<nombre_voitures>5</nombre_voitures>
+    </type>
+    <type>
+	<type_train>bus</type_train>
+	<nombre_voitures>1</nombre_voitures>
+    </type>
+</ligne_SNCF>
+

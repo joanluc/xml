@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   targetNamespace="ligne_SNCF_Namespace"
+	   elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+      <xs:element name="num_train"/>
+      <xs:element name="type_train" default="bus">
+        <xs:sequence>
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="TGV"/>
+	      <xs:enumeration value="TER"/>
+	      <xs:enumeration value="intercités"/>
+	      <xs:enumeration value="bus"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+        </xs:sequence>
+      </xs:element>
+      <xs:element name="gare_depart"/>
+      <xs:element name="jour_semaine">
+        <xs:sequence>
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="Lun"/>
+	      <xs:enumeration value="Mar"/>
+	      <xs:enumeration value="Mer"/>
+	      <xs:enumeration value="Jeu"/>
+	      <xs:enumeration value="Ven"/>
+	      <xs:enumeration value="Sam"/>
+	      <xs:enumeration value="Dim"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+        </xs:sequence>
+      </xs:element>
+      <xs:element name="heure_depart" type="xs:time"/>
+      <xs:element name="gare_arrivee"/>
+      <xs:element name="heure_arrivee" type="xs:time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

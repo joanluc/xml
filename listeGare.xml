@@ -1,0 +1,109 @@
+<liste_de_gares>
+    <!--
+	Source des informations https://www.voyages-sncf.com/train/horaires/bordeaux/hendaye
+
+	 <!ELEMENT liste_de_gares (gare)*>
+	 <!ELEMENT gare (nom_gare?,ville?,gps?)>
+	 <!ELEMENT nom_gare (#PCDATA) #REQUIRED>
+	 <!ELEMENT ville (#PCDATA) #REQUIRED>
+	 <!ELEMENT gps  (lon? , lat?)>
+	 <!ELEMENT lon (#PCDATA) #REQUIRED>
+	 <!ELEMENT lat (#PCDATA) #REQUIRED>
+    -->
+    <gare>
+      <nom_gare>Bayonne</nom_gare>
+      <ville>Bayonne</ville>
+      <gps>
+	<lon>-1.470233</lon>
+	<lat>43.496873</lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Biarritz</nom_gare>
+      <ville>Biarritz</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Bordeaux Saint Jean</nom_gare>
+      <ville>Bordeaux</ville>
+      <gps>
+	<lon>+0°33'22.2"W</lon>
+	<lat>44°49'35.9"N</lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Dax</nom_gare>
+      <ville>Dax</ville>
+      <gps>
+	<lon>-1.049750</lon>
+	<lat>43.720630</lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Facture Biganos</nom_gare>
+      <ville>Facture</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Guéthary</nom_gare>
+      <ville>Guéthary</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Hendaye Les Deux-Jumeaux</nom_gare>
+      <ville>Hendaye</ville>
+      <gps>
+	<lon> 1°46'49.7"W</lon>
+	<lat>43°21'11.5"N</lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Hendaye</nom_gare>
+      <ville>Hendaye</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Morcenx</nom_gare>
+      <ville>Morcenx</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Pessac</nom_gare>
+      <ville>Pessac</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Saint-Jean-de-Luz - Ciboure</nom_gare>
+      <ville>Saint-Jean-de-Luz</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+    <gare>
+      <nom_gare>Saint-Vincent-de-Tyrosse</nom_gare>
+      <ville>Saint-Vincent-de-Tyrosse</ville>
+      <gps>
+	<lon></lon>
+	<lat></lat>
+      </gps>
+    </gare>
+</liste_de_gares>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   targetNamespace="ligne_SNCF_Namespace"
+	   elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType mixed="True">
+      <xs:element name="num_train"/>
+      <xs:element name="nom_gare"/>
+      <xs:element name="terminus" type="xs:boolean"/>
+      <xs:element name="heure" type="xs:time"/>
+<!--
+
+ <!ELEMENT arret (num_train?,gare?,terminus?,jour_semaine?,heure?)>
+ <!ELEMENT num_train (IDREF) #REQUIRED>
+ <!ELEMENT nom_gare (IDREF) #REQUIRED>
+ <!ELEMENT terminus (#PCDATA | Vrai | Faux) "Faux" #REQUIRED>
+ <!ELEMENT heure (#PCDATA) #REQUIRED>
+ -->
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
