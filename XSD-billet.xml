@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" encoding="UTF-8" href="projet_xml.xsl"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   targetNamespace="ligne_SNCF_Namespace"
+	   elementFormDefault="qualified">
+  <xs:element name="ligne_SNCF">
+    <xs:complexType mixed="true">
+      <xs:element name="num_voiture"/>
+      <xs:element name="num_train"/>
+      <xs:element name="gare_depart"/>
+      <xs:element name="date_depart" type="xs:date"/>
+      <xs:element name="heure_depart" type="xs:time"/>
+      <xs:element name="gare_arrivee"/>
+      <xs:element name="type_billet">
+	<!--
+	    <!ELEMENT type_billet (#PCDATA | idtgv | Oui-go | SNCF2 | SNCF1 ) "SNCF2" #REQUIRED>
+	-->
+        <xs:sequence>
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="idtgv"/>
+	      <xs:enumeration value="Oui-go"/>
+	      <xs:enumeration value="SNCF2"/>
+	      <xs:enumeration value="SNCF1"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+          </xs:sequence>
+      </xs:element>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,15 @@
+<liste_billets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
+    <billet>
+      <num_voiture></num_voiture>
+      <num_train></num_train>
+      <gare_depart></gare_depart>
+      <date_depart></date_depart>
+      <heure_depart></heure_depart>
+      <gare_arrivee></gare_arrivee>
+      <type_billet>
+	<!--
+	    <!ELEMENT type_billet (#PCDATA | idtgv | Oui-go | SNCF2 | SNCF1 ) "SNCF2" #REQUIRED>
+	    -->
+      </type_billet>
+    </billet>
+</liste_billets>

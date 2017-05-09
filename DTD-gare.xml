@@ -19,6 +19,16 @@ xml: 	La valeur est une valeur XML prédéfinie
 
 <!DOCTYPE ligne_SNCF [
 
+ <!ELEMENT liste_billets (billet)*>
+ <!ELEMENT billet (num_train?, num_voiture?, gare_depart?, date_depart?, heure_depart?, gare_arrivee?, type_bilet?)>
+ <!ELEMENT num_voiture (ID) #IMPLIED>
+ <!ELEMENT num_train (IDREF) #REQUIRED>
+ <!ELEMENT gare_depart (IDREF) #REQUIRED>
+ <!ELEMENT date_depart (#PCDATA) #REQUIRED>
+ <!ELEMENT heure_depart (#PCDATA) #REQUIRED>
+ <!ELEMENT gare_arrivee (IDREF) #REQUIRED>
+ <!ELEMENT type_billet (#PCDATA | idtgv | Oui-go | SNCF2 | SNCF1 ) "SNCF2" #REQUIRED>
+
  <!ELEMENT type_de_transport (type)*>
  <!ELEMENT type (type_train?, nombre_voitures?)>
  <!ELEMENT type_train (#PCDATA | TGV | TER | intercités | bus) "bus" #REQUIRED>
@@ -60,6 +70,17 @@ xml: 	La valeur est une valeur XML prédéfinie
 
 <ligne_SNCF
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gare_sncf.xsd">
+  <liste_billets>
+    <billet>
+      <num_voiture></num_voiture>
+      <num_train></num_train>
+      <gare_depart></gare_depart>
+      <date_depart></date_depart>
+      <heure_depart></heure_depart>
+      <gare_arrivee></gare_arrivee>
+      <type_billet></type_billet>
+    </billet>
+  </liste_billets>
   <type_de_transport>
     <!--
 	<!ELEMENT type_de_transport (type)*>
@@ -188,7 +209,7 @@ xml: 	La valeur est une valeur XML prédéfinie
 	Personnellement je préférerai cette notation qui serait plus explicite : "<num_train>8567,8577</num_train>"
     -->
     <type_train>TGV</type_train>
-    <nombre_voitures>15<nombre_voitures>
+    <nombre_voitures>15</nombre_voitures>
     <gare_depart>Bordeaux Saint Jean</gare_depart>
       <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
     <heure_depart>9h51</heure_depart>
@@ -198,7 +219,7 @@ xml: 	La valeur est une valeur XML prédéfinie
   <train>
     <num_train>TGV 8531</num_train>
     <type_train>TGV</type_train>
-    <nombre_voitures>15<nombre_voitures>
+    <nombre_voitures>15</nombre_voitures>
     <gare_depart>Bordeaux Saint Jean</gare_depart>
       <jour_semaine>Lun, Mar, Mer, Jeu, Ven, Sam, Dim</jour_semaine>
     <heure_depart>10h51</heure_depart>
